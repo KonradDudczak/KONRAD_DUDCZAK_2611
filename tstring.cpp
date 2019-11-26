@@ -68,6 +68,6 @@ cout<<"TString move operator= "<< len <<" - "<<(ptr ? ptr : "pusty")<<endl;
 return *this;
     
         
-    }
+    } 
 
 
