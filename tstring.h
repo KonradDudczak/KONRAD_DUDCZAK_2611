@@ -7,6 +7,8 @@ class TString {
 TString(const TString& s);
 TString& operator= (const TString& s);
 TString& operator= (TString&& s);
+char& operator[](size_t n);
+const char& operator[](size_t n)const;
 ~TString();
 
  //interfejs
@@ -18,3 +20,4 @@ TString& operator= (TString&& s);
  protected:
 };
 #endif 
+
