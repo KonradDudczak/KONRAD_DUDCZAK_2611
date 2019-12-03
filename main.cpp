@@ -9,17 +9,18 @@ TString fun(const char* c) {
 
 
 int main ()
-{
+{ TString s1="inicjalizacja slowem";
 
-TString s4("inicjalizacja slowem tym");
+//TString s4("inicjalizacja slowem tym");
   //TString s3;
    // TString s3 (s2);
     // albo TString s3 {s2};
    // TString s3 = "alfa beta";
   //s3 = s2;
 //  s3=std::move(s1);
-  TString s5=fun("jakis napis");
-  TString s6=s4;
-
+  //TString s5=fun("jakis napis");
+  //TString s6=s4;
+for (auto n:s1) {n++;} endl (cout); 
+for (const auto& n: s1) cout << n <<" - "; cout << endl;
 
 }
