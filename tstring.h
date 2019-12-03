@@ -1,5 +1,6 @@
 #ifndef TSTRING_H
 #define TSTRING_H
+#include "operatory.h"
 #include<cstring>
 class TString {
  public:
@@ -19,6 +20,12 @@ char& front() {return *ptr;}
 const char& front() const {return *ptr;}
 char& back() {return*(ptr+len-1); }
 const char& back() const {return *(ptr+len-1);}
+size_t size () const{return len; }
+char* insert(size_t pos, const char* c);
+char* insert(size_t pos, char c);
+char* erase(size_t bpos = 0, size_t len = 0);
+friend std::ostream& MojeOperatory::operator<< (std::ostream& strumien, const TString& s);
+
 
  //interfejs
  private:

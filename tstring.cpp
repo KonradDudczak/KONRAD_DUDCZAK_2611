@@ -1,4 +1,5 @@
 #include"tstring.h"
+
 #include<iostream>
 #include<stdexcept>
 using namespace std;
@@ -86,4 +87,25 @@ const char& TString::operator[](size_t n) const {
     if (!ptr) throw invalid_argument("pusty obiket");
 if (n >= 0 && n <= len ) return ptr[n];
 throw out_of_range("In TString::operator[] argument out of scope");
+}
+
+char* TString::insert( size_t pos, const char* c ) {
+if (pos >=0 && pos <= len) {
+size_t oldlen = len;
+len = len+strlen(c);
+char* tmp = new char[ len+1 ];
+strcpy( tmp, ptr );
+for (size_t i=pos; i<pos+strlen(c); ++i) {
+tmp[i] = c[i-pos];
+}
+for (size_t i=pos; i<oldlen; ++i) {
+tmp[i+strlen(c)] = ptr[i];
+}
+delete [] ptr;
+ptr = tmp;
+return ptr+pos;
+} else {
+throw out_of_range("zly argument");
+}
+return ptr;
 }
