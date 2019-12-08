@@ -12,7 +12,7 @@ TString fun(const char* c) {
 
 int main ()
 { TString s1="inicjalizacja slowem";
-
+  s1.insert(2, "proba");
 //TString s4("inicjalizacja slowem tym");
   //TString s3;
    // TString s3 (s2);
@@ -26,6 +26,6 @@ int main ()
 //for (const auto& n: s1) cout << n <<" - "; cout << endl;
 
 //s1.insert(0, "wstawka");
-cout << "zawartość obiektu s1: " << s1 << endl;
+cout << "zawartosc obiektu s1: " << s1 << endl;
 
 }
