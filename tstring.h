@@ -22,8 +22,8 @@ char& back() {return*(ptr+len-1); }
 const char& back() const {return *(ptr+len-1);}
 size_t size () const{return len; }
 char* insert(size_t pos, const char* c);
-char* insert(size_t pos, char c);
-char* erase(size_t bpos = 0, size_t len = 0);
+char* insert(size_t pos, char* c);
+char* erase(size_t bpos = 0, size_t leng = 0);
 friend std::ostream& MojeOperatory::operator<< (std::ostream& strumien, const TString& s);
 
 
