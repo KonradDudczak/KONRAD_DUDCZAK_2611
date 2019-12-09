@@ -103,9 +103,52 @@ tmp[i+strlen(c)] = ptr[i];
 }
 delete [] ptr;
 ptr = tmp;
-return ptr+pos;
+return ptr;
 } else {
 throw out_of_range("zly argument");
 }
 return ptr;
+cout<<*ptr;
+}
+
+char* TString:: insert(size_t pos, char* c)
+{
+if (pos >=0 && pos <= len) {
+size_t oldlen = len;
+len = len+strlen(c);
+char* tmp = new char[ len+1 ];
+strcpy( tmp, ptr );
+for (size_t i=pos; i<pos+strlen(c); ++i) {
+tmp[i] = c[i-pos];
+}
+for (size_t i=pos; i<oldlen; ++i) {
+tmp[i+strlen(c)] = ptr[i];
+}
+delete [] ptr;
+ptr = tmp;
+return ptr;
+} else {
+throw out_of_range("zly argument");
+}
+return ptr;
+cout<<*ptr;
+
+}
+
+char* TString:: erase(size_t bpos, size_t leng)
+
+{if (bpos==0 && leng==0)
+    {delete [] ptr;}
+if (bpos<leng && (bpos>=0 && leng<=len))
+{
+char* tmp = new char [len - (leng-bpos+1)];
+for (size_t i=0; i<=( len - (leng-bpos+1)); i++)
+{tmp[i] = ptr [(leng+1)+i];}
+ptr = tmp;
+return ptr;
+}
+else {throw out_of_range("zle argumenty");}
+
+
+    
 }
