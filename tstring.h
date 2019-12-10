@@ -25,7 +25,7 @@ char* insert(size_t pos, const char* c);
 char* insert(size_t pos, char* c);
 char* erase(size_t bpos = 0, size_t leng = 0);
 friend std::ostream& MojeOperatory::operator<< (std::ostream& strumien, const TString& s);
-
+friend std::istream& MojeOperatory::operator>> ( std::istream& strumien, TString& s );
 
  //interfejs
  private:

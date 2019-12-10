@@ -8,5 +8,8 @@
 class TString; 
 namespace MojeOperatory { // definiujemy naszą przestrzeń nazw
 std::ostream& operator<<( std::ostream& strumien, const TString& s );
+std::istream& operator>>( std::istream& strumien, TString& s );
 }
+
+
 #endif

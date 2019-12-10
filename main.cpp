@@ -20,6 +20,8 @@ int main ()
   cout<<s1<<endl;
   s1.erase(1,3);
   cout<<s1<<endl;
+  cout<<"Podaj ciag: "<<endl;
+  cin>>s1;
   // s1.erase();
 //TString s4("inicjalizacja slowem tym");
   //TString s3;
