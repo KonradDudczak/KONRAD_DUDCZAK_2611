@@ -3,7 +3,7 @@
 #include<iostream>
 #include<stdexcept>
 using namespace std;
-TString::TString(const char* s):ptr(nullptr), len(0){ 
+ TString::TString(const char* s):ptr(nullptr), len(0){ 
     if(s>0){
         len =strlen(s);
         ptr = new char [len +1];
