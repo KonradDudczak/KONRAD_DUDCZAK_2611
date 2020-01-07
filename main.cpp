@@ -23,12 +23,12 @@ int main ()
   //cout<<"Podaj ciag: "<<endl;
   //cin>>s1;
   // s1.erase();
-  TString s4("inicjalizacja slowem tym");
-  cout<< s1+s4 <<endl;
+  //TString s4("inicjalizacja slowem tym");
+  //cout<< s1+s4 <<endl;
   //s1= s1 + "ten niedopasowany, a działa";
   
-  s1 += s1;
-  cout<<s1;
+  ///s1 += s1;
+  //cout<<s1;
   
   //TString s3;
    // TString s3 (s2);
@@ -68,7 +68,7 @@ int main ()
 //struktura klasy
 //jak przeciazyc operator w klasie
 //po co definiujemky tryp naglowkowy 
-//autorekurencja uzycie operatora dis 
+//autorekurencja uzycie operatora this 
 //kontenery standardowe 
 //traktowanie obieku jako tablice
 //strumienie przeciazenia
@@ -76,3 +76,7 @@ int main ()
 //domyslna konwersja
 //deklarowanie metod konwerski zabraninie konwersji niejawnej
 
+
+//07.01.20
+/* Z wykorzytsaniem wyyrażenia Lambda na dwóch zmiennych orzekazazanych do niego (jeden za pomocą referencji), sprawdź stan tych zmiennych poprzez wykonanie kilku pętli.
+*/
