@@ -11,7 +11,7 @@ TString fun(const char* c) {
 
 
 int main ()
-{ //TString s1="inicjalizacja slowem";
+{ TString s1("inicjalizacja slowem");
   //s1.insert(2, "proba");
   //cout<<s1<<endl;
   //s1.insert(s1.size(), "druga");
@@ -23,7 +23,13 @@ int main ()
   //cout<<"Podaj ciag: "<<endl;
   //cin>>s1;
   // s1.erase();
-//TString s4("inicjalizacja slowem tym");
+  TString s4("inicjalizacja slowem tym");
+  cout<< s1+s4 <<endl;
+  //s1= s1 + "ten niedopasowany, a działa";
+  
+  s1 += s1;
+  cout<<s1;
+  
   //TString s3;
    // TString s3 (s2);
     // albo TString s3 {s2};
@@ -38,10 +44,15 @@ int main ()
 //s1.insert(0, "wstawka");
 //cout << "zawartosc obiektu s1: " << s1 << endl;
 
-TString s6;
-char* ch = s6;
-char tab [100];
-strcpy (tab, s6);
+//TString s6;
+//char* ch = s6;
+//char tab [100];
+//strcpy (tab, s6);
+//
+
+
+
+
 }
 
 //liczby losowe roznica random device a random roznice
