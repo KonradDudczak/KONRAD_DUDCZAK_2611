@@ -23,7 +23,7 @@ int main ()
   //cout<<"Podaj ciag: "<<endl;
   //cin>>s1;
   // s1.erase();
-  //TString s4("inicjalizacja slowem tym");
+  TString s4("inicjalizacja slowem tym");
   //cout<< s1+s4 <<endl;
   //s1= s1 + "ten niedopasowany, a działa";
   
@@ -41,7 +41,7 @@ int main ()
 //for (auto n:s1) {n++;} endl (cout); 
 //for (const auto& n: s1) cout << n <<" - "; cout << endl;
 
-//s1.insert(0, "wstawka");
+//s1.insert(0, "w stawka");
 //cout << "zawartosc obiektu s1: " << s1 << endl;
 
 //TString s6;
@@ -49,11 +49,21 @@ int main ()
 //char tab [100];
 //strcpy (tab, s6);
 //
-
-
-
-
+ auto lambda = [s1,&s4 ] (int liczba_pierwsza=0, int liczba_druga=0, const char tmp = 's') mutable
+  
+{ 
+  for (char n:s1)
+      {if (tmp==n) liczba_pierwsza++; }     
+  for (char n:s4)
+      {if (tmp==n) liczba_druga++; }
+  return liczba_pierwsza+liczba_druga;
+  
+};
+cout<<lambda()<<endl;
+//cout<<lambda()<<endl;
 }
+
+
 
 //liczby losowe roznica random device a random roznice
 //konstruktory
@@ -80,3 +90,4 @@ int main ()
 //07.01.20
 /* Z wykorzytsaniem wyyrażenia Lambda na dwóch zmiennych orzekazazanych do niego (jeden za pomocą referencji), sprawdź stan tych zmiennych poprzez wykonanie kilku pętli.
 */
+
