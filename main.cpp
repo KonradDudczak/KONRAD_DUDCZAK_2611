@@ -60,7 +60,7 @@ int main ()
   
 };
 cout<<lambda()<<endl;
-//cout<<lambda()<<endl;
+
 }
 
 
